@@ -6,16 +6,16 @@ missingCeremony = []
 # a is absent
 # p is present
 
-def attendence(n, string=""):
+def attendence(n, eachDay=""):
 
-    if len(string) == days and "aaaa" not in string:
-        if string[-1] == "a":
-            missingCeremony.append(string)
-        attendClasses.append(string)
+    if len(eachDay) == days and "aaaa" not in eachDay:
+        if eachDay[-1] == "a":
+            missingCeremony.append(eachDay)
+        attendClasses.append(eachDay)
 
     if n > 0:
-        attendence(n - 1, string + "a")
-        attendence(n - 1, string + "p")
+        attendence(n - 1, eachDay + "a")
+        attendence(n - 1, eachDay + "p")
 
 attendence(days)
 
